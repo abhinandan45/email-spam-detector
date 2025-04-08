@@ -4,9 +4,3 @@ numpy
 pandas
 matplotlib
 
-
-# git init
-# git add .
-# git commit -m "initial commit"
-# git remote add origin https://github.com/abhinandan45/<repo-name>.git
-# git push -u origin main
