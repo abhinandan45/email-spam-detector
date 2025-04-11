@@ -1,0 +1,27 @@
+/* Custom overrides and extra effects */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #6366f1; /* Indigo */
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  }
+  
+  button:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Smooth fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
