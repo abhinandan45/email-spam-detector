@@ -1,14 +1,11 @@
 import streamlit as st
 import pickle
 
-# Load model and vectorizer
 model = pickle.load(open('model/email_spam_detection.pkl', 'rb'))
 vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
 
-# Page config
 st.set_page_config(page_title="Email Spam Detector", page_icon="📧", layout="centered")
 
-# Custom CSS for styling
 st.markdown("""
     <style>
     .main {
@@ -44,14 +41,11 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# App Title
 st.markdown("<h1 style='text-align: center; color: #4f46e5;'>📧 Email Spam Detector</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 18px;'>Check if your email is Spam or Legitimate</p>", unsafe_allow_html=True)
 
-# Input Box
 input_text = st.text_area("✉️ Paste your email message here:")
 
-# Prediction
 if st.button("🔍 Detect"):
     if input_text.strip() == "":
         st.warning("⚠️ Please enter a message.")
@@ -64,7 +58,6 @@ if st.button("🔍 Detect"):
         else:
             st.success("✅ This is a **Legitimate** Email.")
 
-# Footer with your name
 st.markdown(
     "<div class='custom-footer'>Made with ❤️ by <b>Abhinandan Rajput</b></div>",
     unsafe_allow_html=True
